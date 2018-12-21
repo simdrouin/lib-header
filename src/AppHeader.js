@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class AppHeader extends Component {
     render() {
@@ -6,4 +7,11 @@ class AppHeader extends Component {
     }
 }
 
-export default AppHeader;
+const mapStateToProps = state => {
+    return {
+        isAuthenticated: state.auth.token !== null
+    }
+};
+
+// export default AppHeader;
+export default connect(mapStateToProps)(AppHeader);
