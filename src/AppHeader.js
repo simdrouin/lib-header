@@ -9,7 +9,7 @@ class AppHeader extends Component {
 
 const mapStateToProps = state => {
     return {
-        isAuthenticated: state.auth.token !== null
+        isAuthenticated: state.token !== null
     }
 };
 
